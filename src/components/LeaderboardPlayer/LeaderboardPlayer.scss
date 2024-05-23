@@ -1,0 +1,61 @@
+div.leaderboard_player {
+  height: 40px;
+  min-height: 40px;
+  width: calc(100% - 30px);
+  backdrop-filter: blur(5px);
+  border-radius: 0px 0.5rem 0.5rem 0px;
+  background: #000000b0;
+  box-shadow: 0 0px 3px rgba(37, 37, 37, 0);
+  animation-duration: 240ms;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.89, 0.86, 1.01);
+
+  &[data-ourplayer="true"] {
+    width: 95%;
+    background: rgb(29 29 29 / 61%);
+    animation-name: player-pass;
+    z-index: 99999;
+  }
+
+  &[data-passed="true"] {
+    animation-name: player-get-passed;
+  }
+
+  div.column_layout {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  @keyframes player-pass {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-40px);
+    }
+  }
+
+  @keyframes player-get-passed {
+    0% {
+      transform: translateY(0px);
+      opacity: 1;
+      filter: brightness(5);
+    }
+    100% {
+      transform: translateY(40px);
+      opacity: 0;
+      filter: brightness(1);
+    }
+  }
+
+  span {
+    &.username {
+      font-weight: 600;
+      font-size: 13pt;
+    }
+  }
+}

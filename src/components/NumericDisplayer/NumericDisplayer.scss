@@ -1,0 +1,45 @@
+div.numeric_displayer {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  position: relative;
+
+  // @keyframes number-pop {
+  //   0% {
+  //     transform: scale(1.2);
+  //     opacity: 1;
+  //   }
+
+  //   100% {
+  //     transform: scale(1);
+  //     opacity: 0;
+  //   }
+  // }
+
+  div.absolute_row {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+      opacity: 0;
+      transform: scale(1);
+
+      animation-name: number-pop;
+      animation-duration: 100ms;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+}

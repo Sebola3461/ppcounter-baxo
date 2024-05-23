@@ -1,0 +1,124 @@
+div.user_statistics_container {
+  width: 500px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+
+  span,
+  p {
+    text-shadow: 0 0px 7px rgb(255 255 255 / 30%);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @keyframes number-pop {
+    0% {
+      transform: scale(0.98);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  div.profile_pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 1rem;
+    background: #000000eb;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://a.ppy.sh/15821708);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0px 7px #ffffff1c;
+
+    div.rank_displayer {
+      width: 80%;
+      border-radius: 0.5rem;
+      height: 22px;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 11pt;
+
+      &:nth-child(1) {
+        margin-top: -10px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: -10px;
+      }
+
+      span,
+      p {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        margin: 0;
+
+        img.brflag {
+          height: 10pt;
+          border-radius: 0.2rem;
+        }
+      }
+    }
+  }
+
+  div.statistics_wrapper {
+    width: calc(100% - 90px);
+    height: 80px;
+    font-weight: 700;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    div.lifebar {
+      width: 100%;
+      border-radius: 1000px;
+      height: 9px;
+      backdrop-filter: blur(10px);
+      background-color: #9b9b9b;
+      margin-bottom: 5px;
+
+      div.fill {
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 1px 1px 5px 0px #ffffffa6;
+        transition: linear 80ms;
+        border-radius: 1000px;
+        height: 8px;
+      }
+    }
+
+    p {
+      font-size: 15pt;
+    }
+  }
+}

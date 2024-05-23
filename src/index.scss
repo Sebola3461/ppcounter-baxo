@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: -20px;
+    left: 0;
+    background: #000000e8;
+    z-index: -10;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+
+    div.overlay {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  *.blur_style {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  *.gradient_text {
+    background: -webkit-linear-gradient(#ffffff, #999999);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0px 7px rgb(255 255 255 / 30%);
+  }
+
+  *.gradient_text_2 {
+    background: -webkit-linear-gradient(#a7a7a7, #585858);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0px 7px rgb(255 255 255 / 30%);
+  }
+}
